@@ -1,0 +1,13 @@
+{% if discipline_list %}
+<H1> The foll are the categories of the AIC::</H1>
+<ul>
+	{% for discipline in discipline_list %}
+	<li><a href = "{% url 'companies:specific' discipline.id %}">{{ discipline.name }}</a></li>
+	{% endfor %}
+</ul>
+
+{% else %}
+	
+<H1> There are no disciplines added as of now </H1>
+
+{% endif %}

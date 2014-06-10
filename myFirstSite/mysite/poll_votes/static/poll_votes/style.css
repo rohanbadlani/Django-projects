@@ -1,0 +1,12 @@
+li a{
+	color: green;
+}
+
+body{
+	background: white url("images/1.gif") no-repeat right bottom;
+	
+}
+
+body p{
+	color: red;
+}

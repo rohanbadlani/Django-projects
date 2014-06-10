@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title> Computer Page </title>
+	</head>
+
+<body>
+	<h3> Pls register your vehicle here </h3>
+	<hr>
+	<p>
+
+	<form action = "{% url 'computers:details' %}" method = "POST">
+	{% csrf_token %}
+		<ul>
+			<li>Make:::: <input type = "text" name = "make" /></li>
+			<li>Models::: <input type = "text" name = "model" /></li>
+			<li>Purchase Date::: <input type = "text" name = "pur_date" /></li>
+			<li>CPU Speed (Giga Hz)::: <input type = "text" name = "cpu_speed"/></li>
+		</ul>
+
+	<input type = "submit" name = "computer_details">
+	</form>
+	</p>
+</body>
+</html>
+
+

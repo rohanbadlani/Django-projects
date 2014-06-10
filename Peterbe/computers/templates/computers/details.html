@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title> Computer Details </title>
+</head>
+<body>
+{% if computer_list %}
+<h3> The following are the computers available </h3>
+<hr>
+
+<ul>
+	{% for computer in computer_list %}
+	<li> Make:::: <strong> {{ computer.make }}</strong></li>
+	<li> Model::: <strong> {{ computer.model }}</strong></li>
+	<li> Purchase_date::: <strong> {{ computer.purchase_date }}</strong></li>
+	<li> CPU Speed::: <strong> {{ computer.cpu_ghz }}</strong></li>
+	<hr>
+	{% endfor %}
+</ul>
+<h3> All these have unique Ids
+</h3>
+
+
+
+{% else %}
+<h3> Sorry, no computers available at this moment </h3>
+<hr>
+
+ {% endif %}
+
+</body>
+</html>
+
+

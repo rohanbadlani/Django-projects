@@ -1,0 +1,21 @@
+{% if company_list %}
+<h1> these are the companies available for the AIC 2014 </h1>
+	<ul>
+		{% for company in company_list %}
+		<li><a href = "{% url 'companies:details' company.id %}">{{ company.name }}</a></li>
+
+		{% endfor %}
+	</ul>
+	
+
+
+
+
+{% else %}
+	
+<h1> No companies have been added till now. </h1>
+
+
+{% endif %}
+
+

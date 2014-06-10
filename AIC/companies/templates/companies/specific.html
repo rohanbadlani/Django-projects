@@ -1,0 +1,13 @@
+{% if company_list %}
+<H1> The foll are the companies of specific brach selected of the AIC::</H1>
+<ul>
+	{% for company in company_list %}
+	<l1>{{ company.name }}</li>
+	{% endfor %}
+</ul>
+
+{% else %}
+	
+<H1> There are no comanies for this branch added as of now </H1>
+
+{% endif %}
